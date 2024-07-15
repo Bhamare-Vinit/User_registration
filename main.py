@@ -25,19 +25,19 @@ def check_if_valid_password(password):
     else:
         return False
 
-# first_name = input("Enter your first name: ")
-# last_name = input("Enter your last name: ")
-# email = input("Enter your email: ")
-# number=input("Enter your mobile number with country code: ")
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+email = input("Enter your email: ")
+number=input("Enter your mobile number with country code: ")
 password=input("Enter your password: ")
 
-# if(check_if_valid_firstname(first_name,last_name) and check_if_valid_email(email) and check_if_valid_number(number)
-#     and check_if_valid_password(password)):
-#     print("Valid user input")
-# else:
-#     print("Invalid user input")
-
-if( check_if_valid_password(password)):
+if(check_if_valid_firstname(first_name,last_name) and check_if_valid_email(email) and check_if_valid_number(number)
+    and check_if_valid_password(password)):
     print("Valid user input")
 else:
     print("Invalid user input")
+
+# if( check_if_valid_password(password)):
+#     print("Valid user input")
+# else:
+#     print("Invalid user input")
