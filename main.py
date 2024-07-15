@@ -19,12 +19,13 @@ def check_if_valid_number(number):
         return False
 
 def check_if_valid_password(password):
+    pattern=r"^(?=.*[!@#$%^&*()_+{}|:<>?])(?!.*[!@#$%^&*()_+{}|:<>?].*[!@#$%^&*()_+{}|:<>?]).*$"
     if  len(password)>=8:
-        if re.search(r"[A-Z]",password) and re.search(r"\d",password):
+        if re.search(r"[A-Z]",password) and re.search(r"\d",password) and re.search(r"[a-z]",password ) and re.search(pattern,password):
             return True
     else:
         return False
-
+# ^.*(?=[]*[!@#$%^&*()_+{}|:<>?]).*$
 # first_name = input("Enter your first name: ")
 # last_name = input("Enter your last name: ")
 # email = input("Enter your email: ")
