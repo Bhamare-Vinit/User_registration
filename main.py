@@ -20,7 +20,8 @@ def check_if_valid_number(number):
 
 def check_if_valid_password(password):
     if  len(password)>=8:
-        return True
+        if re.search(r"[A-Z]",password):
+            return True
     else:
         return False
 
