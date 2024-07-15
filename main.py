@@ -7,16 +7,17 @@ import re
 # else:
 #     print("Invalid Firstname")
 
-def check_if_valid_firstname(first_name):
-    if re.search("[A-Z][a-z]{2,}$", first_name):
+def check_if_valid_firstname(first_name,last_name):
+    if re.search("[A-Z][a-z]{2,}$", first_name) and re.search("[A-Z][a-z]{2,}$", last_name):
         return True
     else:
         return False
 
 
 first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
 
-if(check_if_valid_firstname(first_name)):
+if(check_if_valid_firstname(first_name,last_name)):
     print("Valid first name")
 else:
     print("Invalid first name")
