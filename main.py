@@ -13,11 +13,18 @@ def check_if_valid_firstname(first_name,last_name):
     else:
         return False
 
+def check_if_valid_email(email):
+    if re.search(r"^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@[a-zA-Z0-9]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$", email):
+        return True
+    else:
+        return False
+
 
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
+email = input("Enter your email: ")
 
-if(check_if_valid_firstname(first_name,last_name)):
-    print("Valid first name")
+if(check_if_valid_firstname(first_name,last_name) and check_if_valid_email(email)):
+    print("Valid user input")
 else:
-    print("Invalid first name")
+    print("Invalid user input")
